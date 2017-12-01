@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Medication" representedClassName=".Medication" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patient" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="toMedication" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="toSchedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="toMedication" inverseEntity="Schedule" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint/>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Nurse" representedClassName=".Nurse" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patients" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="toPatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="toNurse" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="toSchedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="toNurse" inverseEntity="Schedule" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName=".Patient" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nurse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toMedication" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medication" inverseName="toPatient" inverseEntity="Medication" syncable="YES"/>
+        <relationship name="toNurse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nurse" inverseName="toPatient" inverseEntity="Nurse" syncable="YES"/>
+        <relationship name="toSchedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="toPatient" inverseEntity="Schedule" syncable="YES"/>
+    </entity>
+    <entity name="Schedule" representedClassName=".Schedule" syncable="YES">
+        <attribute name="dosage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="doseType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medicine" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nurse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patient" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="toMedication" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medication" inverseName="toSchedule" inverseEntity="Medication" syncable="YES"/>
+        <relationship name="toNurse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nurse" inverseName="toSchedule" inverseEntity="Nurse" syncable="YES"/>
+        <relationship name="toPatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="toSchedule" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Medication" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Nurse" positionX="-387" positionY="-270" width="128" height="120"/>
+        <element name="Patient" positionX="-216" positionY="-243" width="128" height="150"/>
+        <element name="Schedule" positionX="-20" positionY="-270" width="128" height="195"/>
+    </elements>
+</model>

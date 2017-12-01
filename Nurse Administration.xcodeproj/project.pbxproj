@@ -1,0 +1,924 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B58848453BB12382DAEA52C /* Pods_Nurse_AdministrationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6538C77368EC3C8A620087 /* Pods_Nurse_AdministrationUITests.framework */; };
+		2B36331C1FD07D6400ECCB13 /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B36331B1FD07D6400ECCB13 /* MedicationTableViewCell.swift */; };
+		2B36331E1FD07E9A00ECCB13 /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B36331D1FD07E9A00ECCB13 /* MedicationView.swift */; };
+		2B3633201FD0D42900ECCB13 /* AppDelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B36331F1FD0D42900ECCB13 /* AppDelegateView.swift */; };
+		2B9AF9861FCF298300E0EEC1 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9851FCF298300E0EEC1 /* Auth.swift */; };
+		2B9AF9881FCF2A2700E0EEC1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9871FCF2A2700E0EEC1 /* Helper.swift */; };
+		2B9AF98A1FCF2CD100E0EEC1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9891FCF2CD100E0EEC1 /* Errors.swift */; };
+		2B9AF98C1FCF397100E0EEC1 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */; };
+		2B9AF98E1FCF47BD00E0EEC1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF98D1FCF47BD00E0EEC1 /* AuthView.swift */; };
+		2BA192E31FCF981600127BF1 /* ListPatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E21FCF981600127BF1 /* ListPatientsTableViewController.swift */; };
+		2BA192E51FCF98F500127BF1 /* ListPatientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E41FCF98F500127BF1 /* ListPatientsView.swift */; };
+		2BA192E71FCFA66E00127BF1 /* ListPatientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E61FCFA66E00127BF1 /* ListPatientsTableViewCell.swift */; };
+		2BA192E91FD03D1B00127BF1 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E81FD03D1B00127BF1 /* PatientViewController.swift */; };
+		2BA192EB1FD03E8200127BF1 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192EA1FD03E8200127BF1 /* PatientTableViewCell.swift */; };
+		2BA192ED1FD03ED400127BF1 /* PatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192EC1FD03ED400127BF1 /* PatientView.swift */; };
+		2BA192EF1FD0510800127BF1 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192EE1FD0510800127BF1 /* ScheduleViewController.swift */; };
+		2BA192F11FD052B400127BF1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192F01FD052B400127BF1 /* ScheduleTableViewCell.swift */; };
+		2BA192F31FD05EFD00127BF1 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192F21FD05EFD00127BF1 /* ScheduleView.swift */; };
+		2BCD07DB1FCEF2DC00BB960E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD07DA1FCEF2DC00BB960E /* AppDelegate.swift */; };
+		2BCD07DD1FCEF2DC00BB960E /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD07DC1FCEF2DC00BB960E /* MedicationViewController.swift */; };
+		2BCD07E01FCEF2DC00BB960E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCD07DE1FCEF2DC00BB960E /* Main.storyboard */; };
+		2BCD07E31FCEF2DC00BB960E /* Nurse_Administration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD07E11FCEF2DC00BB960E /* Nurse_Administration.xcdatamodeld */; };
+		2BCD07E51FCEF2DC00BB960E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCD07E41FCEF2DC00BB960E /* Assets.xcassets */; };
+		2BCD07E81FCEF2DC00BB960E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCD07E61FCEF2DC00BB960E /* LaunchScreen.storyboard */; };
+		2BCD07F31FCEF2DD00BB960E /* Nurse_AdministrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD07F21FCEF2DD00BB960E /* Nurse_AdministrationTests.swift */; };
+		2BCD07FE1FCEF2DD00BB960E /* Nurse_AdministrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD07FD1FCEF2DD00BB960E /* Nurse_AdministrationUITests.swift */; };
+		2BCD080C1FCEF47A00BB960E /* Nurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD080B1FCEF47A00BB960E /* Nurse.swift */; };
+		2BCD080E1FCEF83C00BB960E /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD080D1FCEF83C00BB960E /* Patient.swift */; };
+		2BCD08101FCEF8AF00BB960E /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD080F1FCEF8AF00BB960E /* Medication.swift */; };
+		2BCD08121FCEFC8600BB960E /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD08111FCEFC8600BB960E /* Schedule.swift */; };
+		2BCD08141FCEFFA200BB960E /* DoseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD08131FCEFFA200BB960E /* DoseType.swift */; };
+		2BCD08161FCF007700BB960E /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD08151FCF007700BB960E /* Priority.swift */; };
+		2BCD081B1FCF0DE800BB960E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD081A1FCF0DE800BB960E /* AuthViewController.swift */; };
+		2BCD081F1FCF0F3A00BB960E /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD081E1FCF0F3A00BB960E /* EncryptionTests.swift */; };
+		2BCD08211FCF10C000BB960E /* CryptHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD08201FCF10C000BB960E /* CryptHash.swift */; };
+		2BCD08251FCF19F200BB960E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD08241FCF19F200BB960E /* Test.swift */; };
+		402B145407C14B7E10CF1AEF /* Pods_Nurse_Administration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C218F8A1BBE056CF8616E34 /* Pods_Nurse_Administration.framework */; };
+		F92F483720AA0343306D7C49 /* Pods_Nurse_AdministrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFEDDBF007BA30F5E6263A7 /* Pods_Nurse_AdministrationTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BCD07EF1FCEF2DD00BB960E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCD07CF1FCEF2DC00BB960E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BCD07D61FCEF2DC00BB960E;
+			remoteInfo = "Nurse Administration";
+		};
+		2BCD07FA1FCEF2DD00BB960E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCD07CF1FCEF2DC00BB960E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BCD07D61FCEF2DC00BB960E;
+			remoteInfo = "Nurse Administration";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08A90FE1D833F480D8845C79 /* Pods-Nurse AdministrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse AdministrationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse AdministrationUITests/Pods-Nurse AdministrationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C218F8A1BBE056CF8616E34 /* Pods_Nurse_Administration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nurse_Administration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		269AE156BAFDC78817506722 /* Pods-Nurse AdministrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse AdministrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse AdministrationTests/Pods-Nurse AdministrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B36331B1FD07D6400ECCB13 /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
+		2B36331D1FD07E9A00ECCB13 /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
+		2B36331F1FD0D42900ECCB13 /* AppDelegateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateView.swift; sourceTree = "<group>"; };
+		2B9AF9851FCF298300E0EEC1 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		2B9AF9871FCF2A2700E0EEC1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2B9AF9891FCF2CD100E0EEC1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
+		2B9AF98D1FCF47BD00E0EEC1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		2BA192E21FCF981600127BF1 /* ListPatientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPatientsTableViewController.swift; sourceTree = "<group>"; };
+		2BA192E41FCF98F500127BF1 /* ListPatientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPatientsView.swift; sourceTree = "<group>"; };
+		2BA192E61FCFA66E00127BF1 /* ListPatientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPatientsTableViewCell.swift; sourceTree = "<group>"; };
+		2BA192E81FD03D1B00127BF1 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		2BA192EA1FD03E8200127BF1 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		2BA192EC1FD03ED400127BF1 /* PatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView.swift; sourceTree = "<group>"; };
+		2BA192EE1FD0510800127BF1 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		2BA192F01FD052B400127BF1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		2BA192F21FD05EFD00127BF1 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		2BCD07D71FCEF2DC00BB960E /* Nurse Administration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nurse Administration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCD07DA1FCEF2DC00BB960E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BCD07DC1FCEF2DC00BB960E /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationViewController.swift; sourceTree = "<group>"; };
+		2BCD07DF1FCEF2DC00BB960E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BCD07E21FCEF2DC00BB960E /* Nurse_Administration.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nurse_Administration.xcdatamodel; sourceTree = "<group>"; };
+		2BCD07E41FCEF2DC00BB960E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BCD07E71FCEF2DC00BB960E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BCD07E91FCEF2DC00BB960E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BCD07EE1FCEF2DD00BB960E /* Nurse AdministrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse AdministrationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCD07F21FCEF2DD00BB960E /* Nurse_AdministrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_AdministrationTests.swift; sourceTree = "<group>"; };
+		2BCD07F41FCEF2DD00BB960E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BCD07F91FCEF2DD00BB960E /* Nurse AdministrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse AdministrationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCD07FD1FCEF2DD00BB960E /* Nurse_AdministrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_AdministrationUITests.swift; sourceTree = "<group>"; };
+		2BCD07FF1FCEF2DD00BB960E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BCD080B1FCEF47A00BB960E /* Nurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse.swift; sourceTree = "<group>"; };
+		2BCD080D1FCEF83C00BB960E /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		2BCD080F1FCEF8AF00BB960E /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		2BCD08111FCEFC8600BB960E /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		2BCD08131FCEFFA200BB960E /* DoseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseType.swift; sourceTree = "<group>"; };
+		2BCD08151FCF007700BB960E /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		2BCD081A1FCF0DE800BB960E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2BCD081E1FCF0F3A00BB960E /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
+		2BCD08201FCF10C000BB960E /* CryptHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptHash.swift; sourceTree = "<group>"; };
+		2BCD08241FCF19F200BB960E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		41024F291762B16499A0359F /* Pods-Nurse Administration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse Administration.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse Administration/Pods-Nurse Administration.release.xcconfig"; sourceTree = "<group>"; };
+		44B3B539D0804DB4726512C5 /* Pods-Nurse Administration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse Administration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse Administration/Pods-Nurse Administration.debug.xcconfig"; sourceTree = "<group>"; };
+		9CFEDDBF007BA30F5E6263A7 /* Pods_Nurse_AdministrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nurse_AdministrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7391713708A6864B0D56C4D /* Pods-Nurse AdministrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse AdministrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse AdministrationTests/Pods-Nurse AdministrationTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA6538C77368EC3C8A620087 /* Pods_Nurse_AdministrationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nurse_AdministrationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5C09633507B59C9623172A /* Pods-Nurse AdministrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nurse AdministrationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nurse AdministrationUITests/Pods-Nurse AdministrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BCD07D41FCEF2DC00BB960E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				402B145407C14B7E10CF1AEF /* Pods_Nurse_Administration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07EB1FCEF2DD00BB960E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F92F483720AA0343306D7C49 /* Pods_Nurse_AdministrationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07F61FCEF2DD00BB960E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B58848453BB12382DAEA52C /* Pods_Nurse_AdministrationUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA192F41FD0766A00127BF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2BA192E61FCFA66E00127BF1 /* ListPatientsTableViewCell.swift */,
+				2BA192EA1FD03E8200127BF1 /* PatientTableViewCell.swift */,
+				2B36331B1FD07D6400ECCB13 /* MedicationTableViewCell.swift */,
+				2BA192F01FD052B400127BF1 /* ScheduleTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2BCD07CE1FCEF2DC00BB960E = {
+			isa = PBXGroup;
+			children = (
+				2BCD07D91FCEF2DC00BB960E /* Nurse Administration */,
+				2BCD07F11FCEF2DD00BB960E /* Nurse AdministrationTests */,
+				2BCD07FC1FCEF2DD00BB960E /* Nurse AdministrationUITests */,
+				2BCD07D81FCEF2DC00BB960E /* Products */,
+				EE808B3DB089938085A26FB4 /* Pods */,
+				3FFF3DC9A51A2053B2D4FB4F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BCD07D81FCEF2DC00BB960E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BCD07D71FCEF2DC00BB960E /* Nurse Administration.app */,
+				2BCD07EE1FCEF2DD00BB960E /* Nurse AdministrationTests.xctest */,
+				2BCD07F91FCEF2DD00BB960E /* Nurse AdministrationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BCD07D91FCEF2DC00BB960E /* Nurse Administration */ = {
+			isa = PBXGroup;
+			children = (
+				2BCD07DA1FCEF2DC00BB960E /* AppDelegate.swift */,
+				2BCD08201FCF10C000BB960E /* CryptHash.swift */,
+				2B9AF9871FCF2A2700E0EEC1 /* Helper.swift */,
+				2BA192F41FD0766A00127BF1 /* Cells */,
+				2BCD08191FCF0D7B00BB960E /* Controller */,
+				2BCD08181FCF0D6700BB960E /* View */,
+				2BCD08171FCF0BA600BB960E /* Model */,
+				2BCD07DE1FCEF2DC00BB960E /* Main.storyboard */,
+				2BCD07E41FCEF2DC00BB960E /* Assets.xcassets */,
+				2BCD07E61FCEF2DC00BB960E /* LaunchScreen.storyboard */,
+				2BCD07E91FCEF2DC00BB960E /* Info.plist */,
+			);
+			path = "Nurse Administration";
+			sourceTree = "<group>";
+		};
+		2BCD07F11FCEF2DD00BB960E /* Nurse AdministrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BCD07F21FCEF2DD00BB960E /* Nurse_AdministrationTests.swift */,
+				2BCD07F41FCEF2DD00BB960E /* Info.plist */,
+				2BCD081E1FCF0F3A00BB960E /* EncryptionTests.swift */,
+				2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */,
+			);
+			path = "Nurse AdministrationTests";
+			sourceTree = "<group>";
+		};
+		2BCD07FC1FCEF2DD00BB960E /* Nurse AdministrationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BCD07FD1FCEF2DD00BB960E /* Nurse_AdministrationUITests.swift */,
+				2BCD07FF1FCEF2DD00BB960E /* Info.plist */,
+			);
+			path = "Nurse AdministrationUITests";
+			sourceTree = "<group>";
+		};
+		2BCD08171FCF0BA600BB960E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BCD07E11FCEF2DC00BB960E /* Nurse_Administration.xcdatamodeld */,
+				2BCD080B1FCEF47A00BB960E /* Nurse.swift */,
+				2BCD080D1FCEF83C00BB960E /* Patient.swift */,
+				2BCD080F1FCEF8AF00BB960E /* Medication.swift */,
+				2BCD08131FCEFFA200BB960E /* DoseType.swift */,
+				2BCD08111FCEFC8600BB960E /* Schedule.swift */,
+				2BCD08151FCF007700BB960E /* Priority.swift */,
+				2BCD08241FCF19F200BB960E /* Test.swift */,
+				2B9AF9891FCF2CD100E0EEC1 /* Errors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BCD08181FCF0D6700BB960E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B9AF98D1FCF47BD00E0EEC1 /* AuthView.swift */,
+				2BA192E41FCF98F500127BF1 /* ListPatientsView.swift */,
+				2BA192EC1FD03ED400127BF1 /* PatientView.swift */,
+				2BA192F21FD05EFD00127BF1 /* ScheduleView.swift */,
+				2B36331D1FD07E9A00ECCB13 /* MedicationView.swift */,
+				2B36331F1FD0D42900ECCB13 /* AppDelegateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BCD08191FCF0D7B00BB960E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B9AF9851FCF298300E0EEC1 /* Auth.swift */,
+				2BCD07DC1FCEF2DC00BB960E /* MedicationViewController.swift */,
+				2BCD081A1FCF0DE800BB960E /* AuthViewController.swift */,
+				2BA192EE1FD0510800127BF1 /* ScheduleViewController.swift */,
+				2BA192E81FD03D1B00127BF1 /* PatientViewController.swift */,
+				2BA192E21FCF981600127BF1 /* ListPatientsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FFF3DC9A51A2053B2D4FB4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C218F8A1BBE056CF8616E34 /* Pods_Nurse_Administration.framework */,
+				9CFEDDBF007BA30F5E6263A7 /* Pods_Nurse_AdministrationTests.framework */,
+				FA6538C77368EC3C8A620087 /* Pods_Nurse_AdministrationUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE808B3DB089938085A26FB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44B3B539D0804DB4726512C5 /* Pods-Nurse Administration.debug.xcconfig */,
+				41024F291762B16499A0359F /* Pods-Nurse Administration.release.xcconfig */,
+				269AE156BAFDC78817506722 /* Pods-Nurse AdministrationTests.debug.xcconfig */,
+				B7391713708A6864B0D56C4D /* Pods-Nurse AdministrationTests.release.xcconfig */,
+				FB5C09633507B59C9623172A /* Pods-Nurse AdministrationUITests.debug.xcconfig */,
+				08A90FE1D833F480D8845C79 /* Pods-Nurse AdministrationUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BCD07D61FCEF2DC00BB960E /* Nurse Administration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BCD08021FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse Administration" */;
+			buildPhases = (
+				3F49E1627BB0B99CE751D16A /* [CP] Check Pods Manifest.lock */,
+				2BCD07D31FCEF2DC00BB960E /* Sources */,
+				2BCD07D41FCEF2DC00BB960E /* Frameworks */,
+				2BCD07D51FCEF2DC00BB960E /* Resources */,
+				01B2D7ACF9EFB15DBDAB7A34 /* [CP] Embed Pods Frameworks */,
+				543C936AE4E4F040A8531E29 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nurse Administration";
+			productName = "Nurse Administration";
+			productReference = 2BCD07D71FCEF2DC00BB960E /* Nurse Administration.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BCD07ED1FCEF2DD00BB960E /* Nurse AdministrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BCD08051FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse AdministrationTests" */;
+			buildPhases = (
+				A8C7BDCE8E49F682CAF79D68 /* [CP] Check Pods Manifest.lock */,
+				2BCD07EA1FCEF2DD00BB960E /* Sources */,
+				2BCD07EB1FCEF2DD00BB960E /* Frameworks */,
+				2BCD07EC1FCEF2DD00BB960E /* Resources */,
+				2146DB68D2E25E20F7F9104D /* [CP] Embed Pods Frameworks */,
+				0842F0DB70BEAFDC41069AA4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BCD07F01FCEF2DD00BB960E /* PBXTargetDependency */,
+			);
+			name = "Nurse AdministrationTests";
+			productName = "Nurse AdministrationTests";
+			productReference = 2BCD07EE1FCEF2DD00BB960E /* Nurse AdministrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BCD07F81FCEF2DD00BB960E /* Nurse AdministrationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BCD08081FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse AdministrationUITests" */;
+			buildPhases = (
+				018441A680E84A70059158C5 /* [CP] Check Pods Manifest.lock */,
+				2BCD07F51FCEF2DD00BB960E /* Sources */,
+				2BCD07F61FCEF2DD00BB960E /* Frameworks */,
+				2BCD07F71FCEF2DD00BB960E /* Resources */,
+				E883C820CAEDB470CDB741DC /* [CP] Embed Pods Frameworks */,
+				ED7E699B78985C8F2678076A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BCD07FB1FCEF2DD00BB960E /* PBXTargetDependency */,
+			);
+			name = "Nurse AdministrationUITests";
+			productName = "Nurse AdministrationUITests";
+			productReference = 2BCD07F91FCEF2DD00BB960E /* Nurse AdministrationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BCD07CF1FCEF2DC00BB960E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Cavalier Revolt";
+				TargetAttributes = {
+					2BCD07D61FCEF2DC00BB960E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					2BCD07ED1FCEF2DD00BB960E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BCD07D61FCEF2DC00BB960E;
+					};
+					2BCD07F81FCEF2DD00BB960E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BCD07D61FCEF2DC00BB960E;
+					};
+				};
+			};
+			buildConfigurationList = 2BCD07D21FCEF2DC00BB960E /* Build configuration list for PBXProject "Nurse Administration" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BCD07CE1FCEF2DC00BB960E;
+			productRefGroup = 2BCD07D81FCEF2DC00BB960E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BCD07D61FCEF2DC00BB960E /* Nurse Administration */,
+				2BCD07ED1FCEF2DD00BB960E /* Nurse AdministrationTests */,
+				2BCD07F81FCEF2DD00BB960E /* Nurse AdministrationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BCD07D51FCEF2DC00BB960E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCD07E81FCEF2DC00BB960E /* LaunchScreen.storyboard in Resources */,
+				2BCD07E51FCEF2DC00BB960E /* Assets.xcassets in Resources */,
+				2BCD07E01FCEF2DC00BB960E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07EC1FCEF2DD00BB960E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07F71FCEF2DD00BB960E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		018441A680E84A70059158C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		01B2D7ACF9EFB15DBDAB7A34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse Administration/Pods-Nurse Administration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0842F0DB70BEAFDC41069AA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse AdministrationTests/Pods-Nurse AdministrationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2146DB68D2E25E20F7F9104D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse AdministrationTests/Pods-Nurse AdministrationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F49E1627BB0B99CE751D16A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		543C936AE4E4F040A8531E29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse Administration/Pods-Nurse Administration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8C7BDCE8E49F682CAF79D68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E883C820CAEDB470CDB741DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse AdministrationUITests/Pods-Nurse AdministrationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7E699B78985C8F2678076A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nurse AdministrationUITests/Pods-Nurse AdministrationUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BCD07D31FCEF2DC00BB960E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCD07E31FCEF2DC00BB960E /* Nurse_Administration.xcdatamodeld in Sources */,
+				2BCD07DD1FCEF2DC00BB960E /* MedicationViewController.swift in Sources */,
+				2B9AF9881FCF2A2700E0EEC1 /* Helper.swift in Sources */,
+				2BA192E31FCF981600127BF1 /* ListPatientsTableViewController.swift in Sources */,
+				2BCD081B1FCF0DE800BB960E /* AuthViewController.swift in Sources */,
+				2BCD08211FCF10C000BB960E /* CryptHash.swift in Sources */,
+				2BCD07DB1FCEF2DC00BB960E /* AppDelegate.swift in Sources */,
+				2B36331E1FD07E9A00ECCB13 /* MedicationView.swift in Sources */,
+				2BA192EF1FD0510800127BF1 /* ScheduleViewController.swift in Sources */,
+				2B9AF98A1FCF2CD100E0EEC1 /* Errors.swift in Sources */,
+				2BA192E71FCFA66E00127BF1 /* ListPatientsTableViewCell.swift in Sources */,
+				2BA192F31FD05EFD00127BF1 /* ScheduleView.swift in Sources */,
+				2BA192EB1FD03E8200127BF1 /* PatientTableViewCell.swift in Sources */,
+				2BCD08251FCF19F200BB960E /* Test.swift in Sources */,
+				2BCD080C1FCEF47A00BB960E /* Nurse.swift in Sources */,
+				2B3633201FD0D42900ECCB13 /* AppDelegateView.swift in Sources */,
+				2B36331C1FD07D6400ECCB13 /* MedicationTableViewCell.swift in Sources */,
+				2BA192E51FCF98F500127BF1 /* ListPatientsView.swift in Sources */,
+				2BA192F11FD052B400127BF1 /* ScheduleTableViewCell.swift in Sources */,
+				2BCD08101FCEF8AF00BB960E /* Medication.swift in Sources */,
+				2BA192ED1FD03ED400127BF1 /* PatientView.swift in Sources */,
+				2BCD08121FCEFC8600BB960E /* Schedule.swift in Sources */,
+				2BA192E91FD03D1B00127BF1 /* PatientViewController.swift in Sources */,
+				2BCD08141FCEFFA200BB960E /* DoseType.swift in Sources */,
+				2B9AF9861FCF298300E0EEC1 /* Auth.swift in Sources */,
+				2B9AF98E1FCF47BD00E0EEC1 /* AuthView.swift in Sources */,
+				2BCD080E1FCEF83C00BB960E /* Patient.swift in Sources */,
+				2BCD08161FCF007700BB960E /* Priority.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07EA1FCEF2DD00BB960E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCD081F1FCF0F3A00BB960E /* EncryptionTests.swift in Sources */,
+				2B9AF98C1FCF397100E0EEC1 /* AuthTests.swift in Sources */,
+				2BCD07F31FCEF2DD00BB960E /* Nurse_AdministrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BCD07F51FCEF2DD00BB960E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCD07FE1FCEF2DD00BB960E /* Nurse_AdministrationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BCD07F01FCEF2DD00BB960E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BCD07D61FCEF2DC00BB960E /* Nurse Administration */;
+			targetProxy = 2BCD07EF1FCEF2DD00BB960E /* PBXContainerItemProxy */;
+		};
+		2BCD07FB1FCEF2DD00BB960E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BCD07D61FCEF2DC00BB960E /* Nurse Administration */;
+			targetProxy = 2BCD07FA1FCEF2DD00BB960E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BCD07DE1FCEF2DC00BB960E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCD07DF1FCEF2DC00BB960E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BCD07E61FCEF2DC00BB960E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCD07E71FCEF2DC00BB960E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BCD08001FCEF2DD00BB960E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BCD08011FCEF2DD00BB960E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BCD08031FCEF2DD00BB960E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B3B539D0804DB4726512C5 /* Pods-Nurse Administration.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse Administration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-Administration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NurseAdministration+Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BCD08041FCEF2DD00BB960E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41024F291762B16499A0359F /* Pods-Nurse Administration.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse Administration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-Administration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NurseAdministration+Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BCD08061FCEF2DD00BB960E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269AE156BAFDC78817506722 /* Pods-Nurse AdministrationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse AdministrationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-AdministrationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nurse Administration.app/Nurse Administration";
+			};
+			name = Debug;
+		};
+		2BCD08071FCEF2DD00BB960E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7391713708A6864B0D56C4D /* Pods-Nurse AdministrationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse AdministrationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-AdministrationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nurse Administration.app/Nurse Administration";
+			};
+			name = Release;
+		};
+		2BCD08091FCEF2DD00BB960E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5C09633507B59C9623172A /* Pods-Nurse AdministrationUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse AdministrationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-AdministrationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nurse Administration";
+			};
+			name = Debug;
+		};
+		2BCD080A1FCEF2DD00BB960E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A90FE1D833F480D8845C79 /* Pods-Nurse AdministrationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX32BQ4E2D;
+				INFOPLIST_FILE = "Nurse AdministrationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.marcusbellamy.Nurse-AdministrationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nurse Administration";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BCD07D21FCEF2DC00BB960E /* Build configuration list for PBXProject "Nurse Administration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCD08001FCEF2DD00BB960E /* Debug */,
+				2BCD08011FCEF2DD00BB960E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BCD08021FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse Administration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCD08031FCEF2DD00BB960E /* Debug */,
+				2BCD08041FCEF2DD00BB960E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BCD08051FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse AdministrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCD08061FCEF2DD00BB960E /* Debug */,
+				2BCD08071FCEF2DD00BB960E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BCD08081FCEF2DD00BB960E /* Build configuration list for PBXNativeTarget "Nurse AdministrationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCD08091FCEF2DD00BB960E /* Debug */,
+				2BCD080A1FCEF2DD00BB960E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BCD07E11FCEF2DC00BB960E /* Nurse_Administration.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BCD07E21FCEF2DC00BB960E /* Nurse_Administration.xcdatamodel */,
+			);
+			currentVersion = 2BCD07E21FCEF2DC00BB960E /* Nurse_Administration.xcdatamodel */;
+			path = Nurse_Administration.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BCD07CF1FCEF2DC00BB960E /* Project object */;
+}

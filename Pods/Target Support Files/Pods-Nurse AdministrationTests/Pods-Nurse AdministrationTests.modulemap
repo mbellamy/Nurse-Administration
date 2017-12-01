@@ -1,0 +1,6 @@
+framework module Pods_Nurse_AdministrationTests {
+  umbrella header "Pods-Nurse AdministrationTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
