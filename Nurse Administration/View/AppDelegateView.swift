@@ -97,23 +97,10 @@ class AppDelegateView:NSObject, NSFetchedResultsControllerDelegate {
         }
     }
 
-    func add24(date: Double) -> Double {
-        var seconds = date
-        while (seconds < Date().timeIntervalSince1970) {
-            seconds = seconds + 86400
-        }
-        return seconds
-    }
-    //seconds between now and alarm time
-    func secondsUntilTime(alarmTime: Date) -> TimeInterval {
-        let now = Date()
-        // if alarm time is in the future
-        if (alarmTime.timeIntervalSince1970 > now.timeIntervalSince1970) {
-            return alarmTime.timeIntervalSince1970 - now.timeIntervalSince1970
-        } else {
-            //if it isnt add a day until its in the future
-            return add24(date: alarmTime.timeIntervalSince1970) - now.timeIntervalSince1970
-        }
+    func alarmComponents(date: Date) -> DateComponents {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        return calendar.dateComponents([.hour,.minute,.second,], from: date)
     }
     //create alarm
     func addAlarm(schedule: Schedule, patient: Patient) {
@@ -121,14 +108,14 @@ class AppDelegateView:NSObject, NSFetchedResultsControllerDelegate {
         let content = UNMutableNotificationContent()
         content.title = "Scheduled Dose"
         content.subtitle = "A dose for \(patient.fullName)"
-        content.body = "You are set to give \(patient.fullName) \(schedule.doseType) \(schedule.dosage) of \(schedule.medicine) at this time."
-        content.badge = 1
+        content.body = "You are set to give \(patient.fullName) \(schedule.dosage) \(schedule.doseType)(s) of \(schedule.medicine) at this time."
         content.categoryIdentifier = "scheduledDose"
         //time until alarm
 
-        let seconds = secondsUntilTime(alarmTime: schedule.time)
+        let components = alarmComponents(date: schedule.time)
+
         //set trigger with time until alarm
-        let contentTrigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+        let contentTrigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         let contentAlarmID = "\(Date().timeIntervalSince1970)"
         // create request
         let request = UNNotificationRequest(identifier: contentAlarmID, content: content, trigger: contentTrigger)

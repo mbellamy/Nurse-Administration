@@ -14,7 +14,6 @@
 		2B9AF9861FCF298300E0EEC1 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9851FCF298300E0EEC1 /* Auth.swift */; };
 		2B9AF9881FCF2A2700E0EEC1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9871FCF2A2700E0EEC1 /* Helper.swift */; };
 		2B9AF98A1FCF2CD100E0EEC1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF9891FCF2CD100E0EEC1 /* Errors.swift */; };
-		2B9AF98C1FCF397100E0EEC1 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */; };
 		2B9AF98E1FCF47BD00E0EEC1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AF98D1FCF47BD00E0EEC1 /* AuthView.swift */; };
 		2BA192E31FCF981600127BF1 /* ListPatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E21FCF981600127BF1 /* ListPatientsTableViewController.swift */; };
 		2BA192E51FCF98F500127BF1 /* ListPatientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA192E41FCF98F500127BF1 /* ListPatientsView.swift */; };
@@ -74,7 +73,6 @@
 		2B9AF9851FCF298300E0EEC1 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		2B9AF9871FCF2A2700E0EEC1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2B9AF9891FCF2CD100E0EEC1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		2B9AF98D1FCF47BD00E0EEC1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		2BA192E21FCF981600127BF1 /* ListPatientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPatientsTableViewController.swift; sourceTree = "<group>"; };
 		2BA192E41FCF98F500127BF1 /* ListPatientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPatientsView.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 				2BCD07F21FCEF2DD00BB960E /* Nurse_AdministrationTests.swift */,
 				2BCD07F41FCEF2DD00BB960E /* Info.plist */,
 				2BCD081E1FCF0F3A00BB960E /* EncryptionTests.swift */,
-				2B9AF98B1FCF397100E0EEC1 /* AuthTests.swift */,
 			);
 			path = "Nurse AdministrationTests";
 			sourceTree = "<group>";
@@ -603,7 +600,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCD081F1FCF0F3A00BB960E /* EncryptionTests.swift in Sources */,
-				2B9AF98C1FCF397100E0EEC1 /* AuthTests.swift in Sources */,
 				2BCD07F31FCEF2DD00BB960E /* Nurse_AdministrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

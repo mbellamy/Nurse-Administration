@@ -100,6 +100,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.medicationSelected = (tableView.cellForRow(at: indexPath) as! ScheduleTableViewCell).nameLabel.text
+        
     }
     
     //MARK: - Search Delegate

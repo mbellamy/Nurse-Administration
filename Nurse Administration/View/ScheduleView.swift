@@ -131,12 +131,15 @@ class ScheduleView:NSObject, NSFetchedResultsControllerDelegate {
         if let dose = Int(doseTextField.text!) {
             let result = self.auth?.saveSchedule(patient: self.patient.email, time: timePicker.date, medicine: medicine, priority: priority, doseType: doseLabel.text!, dosage: dose, nurse: helper.isLoggedIn()!)
             if (result == true) {
-                addAlarm(medicine: medicine)
                 self.auth?.viewController.navigationController?.popViewController(animated: true)
             } else {
                 if let auth = self.auth?.viewController {
                     helper.showErrorOn(ViewController: auth, message: AuthError.ERROR)
                 }
+            }
+        } else {
+            if let auth = self.auth?.viewController {
+                helper.showErrorOn(ViewController: auth, message: AuthError.ERROR)
             }
         }
         

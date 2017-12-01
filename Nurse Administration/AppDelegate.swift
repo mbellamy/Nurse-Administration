@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //remove any notifications
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        UIApplication.shared.applicationIconBadgeNumber = 0
 
         //config
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
@@ -39,10 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let appView = AppDelegateView()
         if (appView.performFetch()) {
         let schedules = appView.getSchedule()
-            if let schedules = schedules {
-                for schedule in schedules {
+        let ordered = schedules?.sorted(by: {$0.priority > $1.priority})
+            if let orderedSchedules = ordered {
+                for schedule in orderedSchedules {
                     if (appView.performFetchPatient()) {
                         if let patient = appView.getPatient(email: schedule.patient) {
+                            print("Saved")
                             appView.addAlarm(schedule: schedule, patient: patient[0])
                         }
                     }

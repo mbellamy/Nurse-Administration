@@ -13,21 +13,72 @@ import CoreData
 
 @testable import Nurse_Administration
 
-class Nurse_AdministrationTests: XCTestCase {
+class Nurse_AdministrationTests: XCTestCase, NSFetchedResultsControllerDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var nurse:Nurse!
+    var badNurse: Nurse!
+    var patient: Patient!
+    var badPatient: Patient!
+    var medicine: Medication!
+    var badMedicine: Medication!
+    var auth: AuthView? = nil
+    //fetch controller
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Nurse> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<Nurse> = Nurse.fetchRequest() as! NSFetchRequest<Nurse>
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
+        //nurse
         nurse = Nurse(context: context)
-        nurse?.email = "nurse@nurse.com"
-        nurse?.password = "password"
+        nurse.email = "nurse@tester.com"
+        nurse.password = "password"
+        
+        badNurse = Nurse(context: context)
+        badNurse.email = "U4Cr99rjByom5eVhaDVWLYYsVtUDRV03G40ptVFulDtISRP28lQ6lWh4QIKdS1hX9vpcoTDk5S2R6mbiuadYol1iBGJvi4LPMRKxkzRaEg3NOd6JZocIO35uuQBzNvwoGQ7kC4DVqLs3rNgIAb7SIH7Wx1HT9JXar77rFHvzQnlMalpCJ7AQpeslRl2n7iczCXuUuwhVmbxdRJcysR98cxXYCftaHT3WHqwBP7uobihV05g9tZPzXSxiu0S43dL"
+        badNurse.password = "iRW6KZ3wG1wTmNCURBJVGYkBUaQZCCKFO"
+        
+        //patient
+        patient = Patient(context: context)
+        patient.email = "patient@test.com"
+        patient.fullName = "John Doe"
+        patient.phoneNumber = "555-555-1212"
+        
+        badPatient = Patient(context: context)
+        badPatient.email = "U4Cr99rjByom5eVhaDVWLYYsVtUDRV03G40ptVFulDtISRP28lQ6lWh4QIKdS1hX9vpcoTDk5S2R6mbiuadYol1iBGJvi4LPMRKxkzRaEg3NOd6JZocIO35uuQBzNvwoGQ7kC4DVqLs3rNgIAb7SIH7Wx1HT9JXar77rFHvzQnlMalpCJ7AQpeslRl2n7iczCXuUuwhVmbxdRJcysR98cxXYCftaHT3WHqwBP7uobihV05g9tZPzXSxiu0S43dL"
+        badPatient.fullName = "CPi0I3I770CxtEiTdsCND96RIxDnBboY4u63Jm0kmzJ9SdWvu5txYOyAHrSgPmGJiGD3OxEj0BRDctWWkeaOpSIjVMHrm3p7wIsoTcucCCco3XUnTevd8ZfAfvLf6lg6W"
+        badPatient.phoneNumber = "iRW6KZ3wG1wTmNCURBJVGYkBUaQZCCKFO"
+        
+        
+        //medicine
+        medicine = Medication(context: context)
+        medicine.name = "Pill X"
+        medicine.patient = patient.email
+        
+        badMedicine = Medication(context: context)
+        badMedicine.name = "U4Cr99rjByom5eVhaDVWLYYsVtUDRV03G40ptVFulDtISRP28lQ6lWh4QIKdS1hX9vpcoTDk5S2R6mbiuadYol1iBGJvi4LPMRKxkzRaEg3NOd6JZocIO35uuQBzNvwoGQ7kC4DVqLs3rNgIAb7SIH7Wx1HT9JXar77rFHvzQnlMalpCJ7AQpeslRl2n7iczCXuUuwhVmbxdRJcysR98cxXYCftaHT3WHqwBP7uobihV05g9tZPzXSxiu0S43dL"
+        badMedicine.patient = badPatient.email
+        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
+        performDelete()
+        
         super.tearDown()
     }
     
@@ -44,88 +95,102 @@ class Nurse_AdministrationTests: XCTestCase {
         let calendar = Calendar.current
         return calendar.date(from: dateComponent)!
     }
+
+    //delete object
+    func performDelete() {
+        let fetch = Nurse.fetchRequest()
+        if let result = try? context.fetch(fetch) {
+            print(result.count)
+            for object in result as! [Nurse] {
+                print(object.email)
+                context.delete(object)
+                do {
+                    print("save")
+                    try context.save()
+                } catch {
+                    
+                }
+            }
+        }
+    }
     
     
     //Nurse
     func testInit_UserWillTakeEmailAndPassword() {
-        XCTAssertEqual(nurse.email, "nurse@nurse.com")
+        XCTAssertEqual(nurse.email, "nurse@tester.com")
         XCTAssertEqual(nurse.password, "password")
     }
     
     func testInit_UserEmailLengthTest() {
         XCTAssertTrue(nurse.email.count <= 254)
+        XCTAssertFalse(badNurse.email.count <= 254)
     }
     func testInit_UserPasswordLengthTest() {
         XCTAssertTrue(nurse.password.count <= 32)
+        XCTAssertFalse(badNurse.password.count <= 32)
+
     }
     
     //Patient
     func testInit_PatientWillTakeEmailPasswordAndPhoneNumber() {
-        let patient:Patient = Patient(context: context)
-        patient.email = "patient@patient.com"
-        patient.fullName = "John Doe"
-        patient.phoneNumber = "555-555-1212"
-        XCTAssertEqual(patient.email, "patient@patient.com")
+       
+        XCTAssertEqual(patient.email, "patient@test.com")
         XCTAssertEqual(patient.fullName, "John Doe")
         XCTAssertEqual(patient.phoneNumber, "555-555-1212")
     }
-//    func testInit_PatientEmailLengthTest() {
-//        let patient:Patient = Patient(email: "patient@patient.com", fullName: "John Doe", phoneNumber: "555-555-1212")
-//        XCTAssertTrue(patient.email.count <= 254)
-//
-//    }
-//    func testInit_PatientFullNameLengthTest() {
-//        let patient:Patient = Patient(email: "patient@patient.com", fullName: "John Doe", phoneNumber: "555-555-1212")
-//        XCTAssertTrue(patient.fullName.count <= 128)
-//        
-//    }
-//    func testInit_PatientPhoneNumberLengthTest() {
-//        let patient:Patient = Patient(email: "patient@patient.com", fullName: "John Doe", phoneNumber: "555-555-1212")
-//        XCTAssertTrue(patient.phoneNumber.count <= 32)
-//        
-//    }
-//    
-//    //Medication
-//    func testInit_MedicationShouldTakeName() {
-//        let medication:Medication = Medication(name: "Pill X")
-//        XCTAssertEqual(medication.name, "Pill X")
-//
-//    }
-//    func testInit_MedicationNameLengthTest() {
-//        let medication:Medication = Medication(name: "Pill X")
-//        XCTAssertTrue(medication.name.count <= 32)
-//    }
-//    
-//    //Schedule
-//    func testInit_ScheduleShouldTakeInfo() {
-//        let medication = Medication(name: "Pill X")
-//        let medicationArray = [medication]
-//        let time = createTime(hours: 16, minutes: 30)
-//        let schedule:Schedule = Schedule(medication: medicationArray, time: time, dosage: 1, doseType: .pill, priority: .medium)
-//        
-//        XCTAssertEqual(schedule.medication.count, 1)
-//        XCTAssertEqual(schedule.medication[0].name, "Pill X")
-//        XCTAssertEqual(format(date: schedule.time), "04:30 PM")
-//        XCTAssertEqual(schedule.doseType, .pill)
-//        XCTAssertEqual(schedule.priority, .medium)
-//        
-//    }
-    
-    //Priority
-    func testInit_Priority() {
-        let priority:Priority = Priority.low
-        XCTAssertEqual(priority, .low)
+    func testInit_PatientEmailLengthTest() {
+        XCTAssertTrue(patient.email.count <= 254)
+        XCTAssertFalse(badPatient.email.count <= 254)
+
 
     }
-    
-    //DoseType
-    func testInit_DoseType() {
-        let doseType:DoseType = DoseType.pill
-        XCTAssertEqual(doseType, .pill)
-
+    func testInit_PatientFullNameLengthTest() {
+        XCTAssertTrue(patient.fullName.count <= 128)
+        XCTAssertFalse(badPatient.fullName.count <= 128)
+        
+    }
+    func testInit_PatientPhoneNumberLengthTest() {
+        XCTAssertTrue(patient.phoneNumber.count <= 32)
+        XCTAssertFalse(badPatient.phoneNumber.count <= 32)
+        
     }
     
+    //Medication
+    func testInit_MedicationShouldTakeName() {
+        XCTAssertEqual(medicine.name, "Pill X")
+
+    }
+    func testInit_MedicationNameLengthTest() {
+        XCTAssertTrue(medicine.name.count <= 32)
+        XCTAssertFalse(badMedicine.name.count <= 32)
+    }
     
    
     
+    func testsAuth_InitAuth() {
+        let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        let _ = authVC.view
+        if let authView:AuthView = AuthView(auth: authVC,
+                                            email: authVC.emailTextField,
+                                            password: authVC.passwordTextField,
+                                            phone: authVC.phoneTextField,
+                                            fullName: authVC.fullNameTextField,
+                                            loginButton: authVC.loginButton,
+                                            registerButton: authVC.gotoRegisterButton,
+                                            loginLabel: authVC.loginLabel) {
+            
+            if let auth = authView.auth?.viewController.isKind(of: AuthViewController.self) {
+                XCTAssertTrue(auth)
+            } else {
+                XCTFail("Auth property is not an AuthViewController")
+            }
+            XCTAssertNotNil(authVC.emailTextField)
+            XCTAssertNotNil(authVC.passwordTextField)
+            XCTAssertNotNil(authVC.phoneTextField)
+            XCTAssertNotNil(authVC.fullNameTextField)
+   
+        }
+    }
+   
+
 }

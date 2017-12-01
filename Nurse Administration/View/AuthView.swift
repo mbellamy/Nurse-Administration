@@ -117,7 +117,7 @@ class AuthView: NSObject {
             if let result = auth?.register(Patient: email, fullName: fullName, phone: phone, nurse: nurse) {
                 if (result == true) {
                     clearAllText()
-                    auth?.viewController.dismiss(animated: true, completion: nil)
+                    auth?.viewController.navigationController?.popViewController(animated: true)
                 } else {
                     helper.showErrorOn(ViewController: (auth?.viewController)!, message: AuthError.ERROR)
                 }

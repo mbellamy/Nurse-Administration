@@ -25,7 +25,7 @@ class EncryptionTests: XCTestCase {
     func testEncryptionGenerateKeyWithPassword() {
         let password = "password"
         let crypt = CryptHash().hash(string: password)
-        if let hash = crypt as? String {
+        if let hash = crypt {
             XCTAssertEqual(hash, "5F4DCC3B5AA765D61D8327DEB882CF99".lowercased())
         } else {
             XCTFail()

@@ -292,7 +292,7 @@
                                     <outlet property="delegate" destination="xQj-5t-IeA" id="IFR-bd-EhH"/>
                                 </connections>
                             </tableView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="24D-MT-sIj">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="24D-MT-sIj">
                                 <rect key="frame" x="0.0" y="505" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="533745500.97472298">
