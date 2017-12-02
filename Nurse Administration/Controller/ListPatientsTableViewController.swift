@@ -31,7 +31,7 @@ class ListPatientsTableViewController: UITableViewController {
                 if let data = listPatient.getPatients() {
                     patients = data
                     tableView.reloadData()
-                    self.navigationController!.navigationBar.topItem!.title = "Logout"
+                    self.navigationController!.navigationBar.topItem?.backBarButtonItem?.title = "Logout"
                 }
             }
         }

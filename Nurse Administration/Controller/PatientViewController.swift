@@ -34,7 +34,6 @@ class PatientViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewWillAppear(_ animated: Bool) {
         if let vPatient = patient {
-            self.navigationController!.navigationBar.topItem!.title = "Back"
             if let patientView = PatientView(auth: self, patient: vPatient, nameLabel: nameLabel, emailLabel: emailLabel, phoneLabel: phoneLabel) {
                 self.patientView = patientView
                 patientView.displayInfo()

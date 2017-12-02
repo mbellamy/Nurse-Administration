@@ -37,7 +37,6 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     override func viewWillAppear(_ animated: Bool) {
         //setup the view
-        self.navigationController!.navigationBar.topItem!.title = "Back"
 
         if let sView = ScheduleView(auth: self, doseLabel: doseSwitchLabel, doseSwitch: doseSwitch, doseTextField: amountTextField, timePicker: timePicker, saveButton: saveBarButton, patient: patient!, searchBar: searchBar) {
             medications = sView.getMedications()

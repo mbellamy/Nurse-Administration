@@ -83,7 +83,13 @@ class PatientView: NSObject, NSFetchedResultsControllerDelegate {
         fetch.predicate = compound
         if let result = try? context.fetch(fetch) {
             for object in result as! [Schedule] {
+                print(object.time)
                 context.delete(object)
+                do {
+                    try context.save()
+                } catch {
+                    
+                }
                 return true
             }
         } else {

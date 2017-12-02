@@ -128,6 +128,9 @@ class AuthView: NSObject {
     //show patients
     func showPatientsList() {
         let patientVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListPatientsTableViewController") as! ListPatientsTableViewController
+        let backItem = UIBarButtonItem()
+        backItem.title = "Logout"
+        self.auth?.viewController.navigationController?.navigationItem.backBarButtonItem = backItem
         self.auth?.viewController.navigationController?.pushViewController(patientVC, animated: true)
     }
 }
